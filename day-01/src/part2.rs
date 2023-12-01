@@ -1,9 +1,9 @@
 use crate::custom_error::AocError;
 
 pub fn process(
-    _input: &str,
+    input: &str,
 ) -> Result<String, AocError> {
-    Ok(_input.lines().map(process_line).sum::<u32>().to_string())
+    Ok(input.lines().map(process_line).sum::<u32>().to_string())
 }
 
 fn process_line(line: &str) -> u32 {
