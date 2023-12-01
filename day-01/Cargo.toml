@@ -10,3 +10,8 @@ thiserror = { workspace = true }
 
 [dev-dependencies]
 divan = { workspace = true }
+
+[[bench]]
+name = "day-01"
+path = "benches/benchmarks.rs"
+harness = false

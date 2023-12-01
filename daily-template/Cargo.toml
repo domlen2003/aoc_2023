@@ -10,3 +10,8 @@ thiserror = { workspace = true }
 
 [dev-dependencies]
 divan = { workspace = true }
+
+[[bench]]
+name = "{{project-name}}"
+path = "benches/benchmarks.rs"
+harness = false

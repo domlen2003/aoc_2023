@@ -1,5 +1,5 @@
 work day part:
-    cargo watch -x "check -p {{day}}" -s "just test {{part}} -p {{day}}" -s "just lint {{day}}" -s "just bench {{day}} {{part}}"
+    cargo watch --ignore 'day-*.bench.txt' -x "check -p {{day}}" -s "just test {{part}} -p {{day}}" -s "just lint {{day}}" -s "just bench {{day}} {{part}}"
 lint day:
     cargo clippy -p {{day}}
 test part +FLAGS='-p day-01':
