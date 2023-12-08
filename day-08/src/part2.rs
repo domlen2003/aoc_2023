@@ -6,12 +6,10 @@ pub fn process(
     input: &str,
 ) -> Result<String, AocError> {
     let def = parse(input)?;
-    def.network.keys().filter(|key| {
-        key.ends_with('A')
-    }).map(|s| {
+    def.network.keys().filter(|&&key| &key[2..] == "A").map(|&s| {
         let mut current = s;
         let mut steps = 0;
-        while !current.ends_with('Z') {
+        while &current[2..] != "Z" {
             let (left, right) = def.network.get(current).unwrap();
             if def.nav[steps % def.nav.len()] == Direction::Left {
                 current = left;
