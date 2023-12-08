@@ -1,0 +1,19 @@
+[package]
+name = "day-08"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+itertools = { workspace = true }
+nom = { workspace = true }
+thiserror = { workspace = true }
+strum = { workspace = true }
+log = "0.4.20"
+
+[dev-dependencies]
+divan = { workspace = true }
+
+[[bench]]
+name = "day-08"
+path = "benches/benchmarks.rs"
+harness = false
