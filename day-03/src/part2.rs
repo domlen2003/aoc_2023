@@ -12,9 +12,17 @@ mod tests {
 
     #[test]
     fn test_process() -> Result<(), AocError> {
-        todo!("haven't built test yet");
-        let input = "";
-        assert_eq!("", process(input)?);
+        let input = "467..114..
+...*......
+..35..633.
+......#...
+617*......
+.....+.58.
+..592.....
+......755.
+...$.*....
+.664.598..";
+        assert_eq!("467835", process(input)?);
         Ok(())
     }
 }
